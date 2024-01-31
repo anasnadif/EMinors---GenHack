@@ -15,7 +15,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
-from tensorflow.keras import layers
+
 
 
 path = "https://raw.githubusercontent.com/generative-hackathon/Genhack3/master/data/"
@@ -51,11 +51,11 @@ extreme_yields = scaler.fit_transform(extreme_yields_df)
 def make_generator_model(latent_dim=16):
     model = tf.keras.Sequential()
     model.add(tf.keras.Input(shape=(latent_dim,)))
-    model.add(layers.Dense(128, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
-    model.add(layers.Dense(64, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
-    model.add(layers.Dense(32, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
-    model.add(layers.Dense(16, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
-    model.add(layers.Dense(4, activation=('tanh')))
+    model.add(tf.keras.layers.Dense(128, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
+    model.add(tf.keras.layers.Dense(64, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
+    model.add(tf.keras.layers.Dense(32, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
+    model.add(tf.keras.layers.Dense(16, activation=tf.keras.layers.LeakyReLU(alpha=0.1)))
+    model.add(tf.keras.layers.Dense(4, activation=('tanh')))
     return model
 
 
