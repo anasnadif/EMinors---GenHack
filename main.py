@@ -35,6 +35,7 @@ def simulate(noise):
         np.save("output.npy", output)
 
     except Exception as e:
+        print("flag")    
         message = e
                 
     finally:
