@@ -73,11 +73,15 @@ def generative_model(noise):
     """
     # See below an example
     # ---------------------
+    print("flag1")
     latent_variable = noise[:, 50]  # choose the appropriate latent dimension of your model
     generator = make_generator_model(50)
+    print("flag2")
     generator.load_weights('parameters/generator_weights_0.0891.h5')
+    print("flag3")
     generated_yields = generator(latent_variable, training=False)
     generated_yields_unscaled = scaler.inverse_transform(generated_yields)
+    print("function ", generated_yields_unscaled.shape)
     return generated_yields_unscaled # G(Z)
 
 
