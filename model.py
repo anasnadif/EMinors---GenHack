@@ -74,7 +74,7 @@ def generative_model(noise):
     # See below an example
     # ---------------------
     print("flag1")
-    latent_variable = noise[:, 50]  # choose the appropriate latent dimension of your model
+    latent_variable = noise[:, :50]  # choose the appropriate latent dimension of your model
     generator = make_generator_model(50)
     print("flag2")
     generator.load_weights('parameters/generator_weights_0.0891.h5')
