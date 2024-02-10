@@ -12,6 +12,6 @@ RUN python -m pip install -r requirements.txt
 COPY parameters/ ./parameters/  
 COPY data/ ./data/
 COPY model.py .
-COPY main.py . 
+COPY main.py .
 
 CMD ["python", "./main.py"]
