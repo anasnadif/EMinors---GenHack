@@ -13,6 +13,19 @@
 
 # <!> DO NOT ADD ANY OTHER ARGUMENTS <!>
 
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn.functional as F
+from utils import *
+from utils import ReverseNoise, sample
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+torch.set_default_device(device)
+models_loaded = [ReverseNoise(dim=4) for i in range(9)]
+for i in range(9):
+  models_loaded[i].load_state_dict(torch.load(f'parameters/model_{i}.pth', map_location=device))
+
 def generative_model(noise, scenario):
     """
     Generative model
@@ -26,14 +39,12 @@ def generative_model(noise, scenario):
     """
     # See below an example
     # ---------------------
-    latent_variable = noise[:, ...]  # choose the appropriate latent dimension of your model
-
+    latent_variable = noise[:, :4]
+    scenario_index = np.argmax(scenario[0])
     # load your parameters or your model
     # <!> be sure that they are stored in the parameters/ directory <!>
-    model = ...
-
-    return model(latent_variable) # G(Z)
-    # return model(latent_variable, scenario) # G(Z, x)
+    model = models_loaded[scenario_index]
+    return sample(model, noise=latent_variable, dim=4)
 
 
 
