@@ -9,6 +9,11 @@ Changes in the climate can be seen in episodes of heavy rainfall, drought, and t
 
 This repository hosts the code developed for the Genhack3 competition, aimed at simulating the maize yield across different years in the context of climate change. Our project seeks to address the urgent need for resilient agricultural practices by developing a tool that predicts annual maize yields under varying climate conditions.
 
+We used *GANs* models for the first evaluation, -you can fin the code the branch *evaluation_1*. 
+We used *Diffusion* models for the second evaluation, -you can fin the code the branch *evaluation_2*. 
+
+We were ranked second in the competition
+
 ## Acknowledgments
 
 Special thanks to École Polytechnique for organizing Genhack3, providing data resources, and support throughout the competition.
