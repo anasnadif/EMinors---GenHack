@@ -7,15 +7,11 @@ Changes in the climate can be seen in episodes of heavy rainfall, drought, and t
 
 **The purpose of this challenge is to build a spatial generator of annual maize yield.**
 
-This repository contains the files required in the GenHack3 challenge. It contains:
+This repository hosts the code developed for the Genhack3 competition, aimed at simulating the maize yield across different years in the context of climate change. Our project seeks to address the urgent need for resilient agricultural practices by developing a tool that predicts annual maize yields under varying climate conditions.
 
-- `data/`: folder containing the training data (`station49.csv`, `station80.csv`, `station40.csv`, `station63.csv`) and a noise file (` noise.npy`)
-- `requirements.txt`: text file containing the libraries with their associated versions you used in the `model.py` file 
-- `Dockerfile`: docker image in order to create a container
-- `main.py`:  main python file containing the simulation function
-- `model.py`: python file containing your generative model and for loading the parameters
-- `parameters/`: folder where you **must** put the parameters of your model
-- `run.sh`: bash script to run your simulation
+## Acknowledgments
+
+Special thanks to École Polytechnique for organizing Genhack3, providing data resources, and support throughout the competition.
 
 ## Contact
 genhack@polytechnique.fr
