@@ -13,7 +13,7 @@ We used **GAN** models for the first evaluation, -you can find the code in the b
 
 We used **Diffusion** models for the second evaluation, -you can find the code in the branch *evaluation_2*. 
 
-We ranked second in the competition
+We ranked second in the competition 🥈
 
 ## Acknowledgments
 
